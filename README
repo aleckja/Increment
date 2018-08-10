@@ -1,4 +1,4 @@
-README for lab4
+README 
 Author: Alicja Gornicka
 
 Makefile - User types make, make all, or make increment to compile the increment.c file and create an exectuable called increment. User types make clean to remove all binary files and exectuables.
