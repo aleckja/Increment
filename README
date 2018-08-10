@@ -1,0 +1,12 @@
+README for lab4
+Author: Alicja Gornicka
+
+Makefile - User types make, make all, or make increment to compile the increment.c file and create an exectuable called increment. User types make clean to remove all binary files and exectuables.
+
+increment.c - A program which increments the number of threads by a thousand. User inputs the flag -n followed by a number to indicate the number of threads, and the program will output that number x 1000.
+
+Googled how to initialize and create a thread and how to use the attributes
+
+Race condition meaning: A race condition is a "run-on" with another thread, which can happen when there are multiple threads. If there is no mutex, a thread can be taken out of the critical section of the code before it is able to finish exectuing its instructions, and be replaced by another thread. The other thread will then begin the execute its set of instructions, and it may also be stopped/paused before it finishes executing its instructions, and the first thread may be put back in. This can mess with the changing of variable values, as they may not be properly incremented or decremented, or change how they are supposed to due to two threads trying to change it at the same time. 
+
+mutex meaning: A mutex is a protection tool for the critical section of the code. There is only one mutex granted at all times to one thread. A thread must acquire the mutex in order to enter the critical section and execute its set of instructions. No other thread may be in the critical section if that thread holds the mutex. Once the thread is done executing its instructions, it releases/frees the mutex so that another thread can enter the critical section. 
